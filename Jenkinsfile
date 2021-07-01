@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('API-Job') {
+    stage('Automation- Jobs') {
       parallel {
         stage('API-Job') {
           steps {
