@@ -21,6 +21,24 @@ pipeline {
           }
         }
 
+        stage('D-Mobile-Job') {
+          steps {
+            build '4 Run_Mobile_Tests'
+          }
+        }
+
+        stage('E-Performance-Job') {
+          steps {
+            build '5 RunAutomationTests_Performance'
+          }
+        }
+
+        stage('F-SonarCube-Job') {
+          steps {
+            build '6 RunAutomationTests_SonarQube'
+          }
+        }
+
       }
     }
 
