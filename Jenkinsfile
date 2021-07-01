@@ -3,12 +3,6 @@ pipeline {
   stages {
     stage('Project-Build') {
       parallel {
-        stage('Project-Build') {
-          steps {
-            build '1 RunDevelopmentProjectBuild'
-          }
-        }
-
         stage('API-Job') {
           steps {
             build '2 RunAutomationTests_API'
