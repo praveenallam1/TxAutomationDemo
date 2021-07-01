@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage('Automation- Jobs') {
       parallel {
-        stage('Build-Jobs') {
+        stage('A-Build-Jobs') {
           steps {
             build '1 RunDevelopmentProjectBuild'
           }
         }
 
-        stage('API-Job') {
+        stage('B-API-Job') {
           steps {
             build '2 RunAutomationTests_API'
           }
         }
 
-        stage('Web-Job') {
+        stage('C-Web-Job') {
           steps {
             build '3 RunAutomationTests_Web'
           }
