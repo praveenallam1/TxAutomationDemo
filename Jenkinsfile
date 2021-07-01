@@ -6,6 +6,7 @@ pipeline {
         stage('API-Job') {
           steps {
             build '2 RunAutomationTests_API'
+            bat 'd: cd  d:\\TXAutomate\\ mvn test -Dcucumber.options="--tags @APItests"'
           }
         }
 
